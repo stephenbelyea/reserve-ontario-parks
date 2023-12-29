@@ -1,0 +1,17 @@
+{
+  "name": "reserve-ontario-parks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "search": "node src/scripts/search-parks.js",
+    "start": "npx serve docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^21.6.1"
+  }
+}

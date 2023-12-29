@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve Ontario Parks</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <main>
+        <h1>Reserve Ontario Parks</h1>
+        <form id="search-parks">
+          <fieldset>
+            <legend>Park and campground</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="park">Park:</label>
+                <input type="text" id="park" value="Pinery" readonly />
+              </div>
+              <div class="field">
+                <label for="campground">Campground:</label>
+                <input type="text" id="campground" value="Riverside" readonly />
+              </div>
+              <div class="field">
+                <label for="area">Area:</label>
+                <input type="text" id="area" value="Area 1" readonly />
+              </div>
+              <div class="field">
+                <label for="map-id">Map ID:</label>
+                <input type="text" id="map-id" value="-2147483326" readonly />
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Dates</legend>
+            <div class="fields">
+              <div class="field">
+                <label for="weekend-1">Weekend 1</label>
+                <input
+                  type="text"
+                  id="weekend-1"
+                  value="2024-02-02 to 2024-02-04"
+                  readonly
+                />
+              </div>
+              <div class="field">
+                <label for="weekend-2">Weekend 2</label>
+                <input
+                  type="text"
+                  id="weekend-2"
+                  value="2024-02-09 to 2024-02-11"
+                  readonly
+                />
+              </div>
+              <div class="field">
+                <label for="weekend-3">Weekend 3</label>
+                <input
+                  type="text"
+                  id="weekend-3"
+                  value="2024-02-16 to 2024-02-18"
+                  readonly
+                />
+              </div>
+              <div class="field">
+                <label for="weekend-4">Weekend 4</label>
+                <input
+                  type="text"
+                  id="weekend-4"
+                  value="2024-02-23 to 2024-02-25"
+                  readonly
+                />
+              </div>
+            </div>
+          </fieldset>
+          <button type="submit">Search</button>
+        </form>
+        <div id="search-results"></div>
+      </main>
+    </div>
+  </body>
+  <script type="module" src="search.js"></script>
+</html>
