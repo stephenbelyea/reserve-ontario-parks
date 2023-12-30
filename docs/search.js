@@ -78,6 +78,11 @@
 
     const searchParks = [
       { park: "Pinery", campground: "Riverside Area 1", mapId: "-2147483326" },
+      {
+        park: "MacGregor Point",
+        campground: "Algonquin Birch Blvd",
+        mapId: "-2147483401",
+      },
     ];
     const searchDates = [
       { startDate: "2024-02-02", endDate: "2024-02-04" },
