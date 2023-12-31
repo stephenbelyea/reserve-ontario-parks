@@ -106,7 +106,6 @@
       { startDate: "2024-02-23", endDate: "2024-02-25" },
       { startDate: "2024-03-01", endDate: "2024-03-03" },
       { startDate: "2024-03-08", endDate: "2024-03-10" },
-      { startDate: "2024-03-15", endDate: "2024-03-17" },
     ];
 
     const allParksSearchUrls = getAllParksSearchUrls(searchParks, searchDates);
