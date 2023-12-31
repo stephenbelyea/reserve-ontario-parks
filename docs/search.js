@@ -50,13 +50,28 @@
         "allow-storage-access-by-user-activation",
       ].join(" ")
     );
-    return frame;
+
+    const frameContainer = document.createElement("div");
+    frameContainer.setAttribute("class", "frame-container");
+    frameContainer.appendChild(frame);
+
+    return frameContainer;
   };
 
-  const createHeadingNode = ({ message }) => {
+  const createHeadingNode = ({ message, searchUrl }) => {
     const heading = document.createElement("h2");
     heading.textContent = message;
-    return heading;
+
+    const link = document.createElement("a");
+    link.setAttribute("href", searchUrl);
+    link.setAttribute("target", "_blank");
+    link.textContent = "Open this page in a new tab";
+
+    const header = document.createElement("header");
+    header.appendChild(heading);
+    header.appendChild(link);
+
+    return header;
   };
 
   const createArticleNode = (parkSearch) => {
@@ -85,9 +100,13 @@
       },
     ];
     const searchDates = [
+      { startDate: "2024-01-26", endDate: "2024-01-28" },
       { startDate: "2024-02-02", endDate: "2024-02-04" },
       { startDate: "2024-02-16", endDate: "2024-02-18" },
       { startDate: "2024-02-23", endDate: "2024-02-25" },
+      { startDate: "2024-03-01", endDate: "2024-03-03" },
+      { startDate: "2024-03-08", endDate: "2024-03-10" },
+      { startDate: "2024-03-15", endDate: "2024-03-17" },
     ];
 
     const allParksSearchUrls = getAllParksSearchUrls(searchParks, searchDates);
@@ -97,7 +116,7 @@
         setTimeout(() => {
           searchResults.appendChild(createArticleNode(allParksSearchUrls[p]));
           resolve();
-        }, 250);
+        }, 300);
       });
     }
 
